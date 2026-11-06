@@ -5,15 +5,18 @@
 The Android app builds with JDK 17, Gradle 8.11.1, SDK 35, and Build Tools 35.0.0.
 
 ```sh
-./gradlew testDebugUnitTest lintDebug assembleDebug
+./gradlew testDebugUnitTest testReleaseUnitTest lintRelease assembleRelease
 ```
 
 - 39 protocol tests pass.
 - 7 interrupted-reset recovery tests pass.
 - 7 tag-data snapshot tests pass.
+- All 53 tests pass for both debug and release builds.
 - No skipped tests, failures, or errors.
-- Android lint reports no issues.
-- The debug APK is signed. It is not a production release.
+- Release lint reports no issues.
+- Version 1.0.0 is a release build, signed with a dedicated release key. It is not debuggable.
+- APK signing verification passes. Certificate SHA-256: `9a67d23bfd14b1e29231145c8588c3ea66b56dc79cf586e624acda42dbff45be`.
+- Release signing uses environment variables. See [`build.md`](build.md).
 - App label: `Filter Cleaner`. Application ID: `dev.filtercleaner`.
 - Minimum API: 26. Target API: 35.
 - App permission: `android.permission.NFC` only.
@@ -42,11 +45,11 @@ Protocol tests cover password values, raw command order, two-byte authentication
 
 Recovery tests verify that another UID cannot clear an unresolved reset or replace its affected UID.
 
-The automatic flow has been checked on the phone for tag discovery, authenticated reads, a detected serial/counter, an enabled Cleanup filter button, and optional raw data display. Version 0.2.2 shows the product code in the main details card; it builds, passes 53 tests, and is installed on the phone. ADB UI inspection confirms that the removed headings are absent and Cleanup filter is the last content item. Physical reset, removal/rotation stress tests, and the purifier's response are not yet verified. Unit tests do not replace those checks.
+The automatic flow has been checked on the phone for tag discovery, authenticated reads, a detected serial/counter, an enabled Cleanup filter button, and optional raw data display. Version 0.2.2 shows the product code in the main details card; it builds, passes 53 tests, and is installed on the phone. ADB UI inspection confirms that the removed headings are absent and Cleanup filter is the last content item. The user subsequently confirmed that the filter reset is verified and works. This is user-reported hardware validation, separate from the assistant's observed read-only checks. Removal/rotation stress tests are not yet verified. Unit tests do not replace those checks.
 
 The raw counter cannot yet be reliably converted to hours. See [`counter-data.md`](counter-data.md).
 
-## Remaining hardware tests
+## Hardware test checklist
 
 1. Keep the known tag against the phone. Confirm its detected UID.
 2. If a reset is appropriate, tap **Cleanup filter** once.
@@ -59,7 +62,9 @@ A zero counter does not prove that the physical filter is clean or safe.
 
 ## APK paths
 
-- Build output: `app/build/outputs/apk/debug/app-debug.apk`.
-- Local named copy: `dist/Filter-Cleaner-debug.apk`.
+- Release build output: `app/build/outputs/apk/release/app-release.apk`.
+- Local named release copy: `dist/Filter-Cleaner.apk`.
+- The preview APK used an Android debug key. It cannot be updated in place with the new release key.
+- Remove the preview before installing the release. Keep the release key for future updates.
 
 The named copy is ignored by version control and must be refreshed after another build.

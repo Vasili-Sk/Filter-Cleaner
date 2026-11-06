@@ -3,6 +3,16 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+val releaseKeystorePath = providers.environmentVariable("FILTER_CLEANER_KEYSTORE_PATH").orNull
+val releaseStorePassword = providers.environmentVariable("FILTER_CLEANER_STORE_PASSWORD").orNull
+val releaseKeyAlias = providers.environmentVariable("FILTER_CLEANER_KEY_ALIAS").orNull
+val releaseKeyPassword = providers.environmentVariable("FILTER_CLEANER_KEY_PASSWORD").orNull
+val signingValues = listOf(releaseKeystorePath, releaseStorePassword, releaseKeyAlias, releaseKeyPassword)
+val hasReleaseSigning = signingValues.all { !it.isNullOrBlank() }
+require(hasReleaseSigning || signingValues.all { it.isNullOrBlank() }) {
+    "Set all four FILTER_CLEANER signing environment variables, or leave all four unset."
+}
+
 android {
     namespace = "dev.filtercleaner"
     compileSdk = 35
@@ -11,8 +21,8 @@ android {
         applicationId = "dev.filtercleaner"
         minSdk = 26
         targetSdk = 35
-        versionCode = 4
-        versionName = "0.2.2"
+        versionCode = 5
+        versionName = "1.0.0"
     }
 
     compileOptions {
@@ -21,9 +31,22 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
 
+    signingConfigs {
+        if (hasReleaseSigning) {
+            create("release") {
+                storeFile = file(releaseKeystorePath!!)
+                storeType = "PKCS12"
+                storePassword = releaseStorePassword
+                keyAlias = releaseKeyAlias
+                keyPassword = releaseKeyPassword
+            }
+        }
+    }
     buildTypes {
         release {
+            isDebuggable = false
             isMinifyEnabled = false
+            if (hasReleaseSigning) signingConfig = signingConfigs.getByName("release")
         }
     }
     lint {

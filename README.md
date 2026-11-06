@@ -6,9 +6,11 @@ Reset the recorded usage counter on compatible Xiaomi air purifier filter tags.
 
 ## Download
 
-[Download Filter Cleaner v0.2.2 for Android](https://github.com/Vasili-Sk/Filter-Cleaner/releases/download/v0.2.2/Filter-Cleaner-v0.2.2-debug.apk)
+**[Download Filter Cleaner for Android](https://github.com/Vasili-Sk/Filter-Cleaner/releases/latest/download/Filter-Cleaner.apk)**
 
-Open the downloaded APK file on your phone to install the app. This is a preview release.
+Open the downloaded APK file on your phone to install the app.
+
+If you have the preview app, remove it before you install this release.
 
 ## Requirements
 
