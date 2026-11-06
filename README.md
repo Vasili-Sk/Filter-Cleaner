@@ -2,6 +2,12 @@
 
 An MIT-licensed Android app that resets the NFC usage counter on compatible Xiaomi air-purifier filters. It uses raw Android `NfcA` commands. It does not need NFC Tools or a password website.
 
+## Download
+
+[Download Filter Cleaner v0.2.2 APK](https://github.com/Vasili-Sk/Filter-Cleaner/releases/download/v0.2.2/Filter-Cleaner-v0.2.2-debug.apk)
+
+Debug-signed preview for Android 8.0 or later with NFC. Checksums and test limits are on the [release page](https://github.com/Vasili-Sk/Filter-Cleaner/releases/tag/v0.2.2).
+
 **The app does not physically clean or restore the filter. Replace the filter when necessary.**
 
 ## Use
