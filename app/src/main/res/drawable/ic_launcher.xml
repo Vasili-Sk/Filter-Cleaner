@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original counter-tag icon; no physical-cleaning symbol. SPDX-License-Identifier: MIT -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="@color/ui_background" android:pathData="M0,0 H108 V108 H0 Z" />
+    <path android:fillColor="@color/ui_surface" android:strokeColor="@color/ui_accent"
+        android:strokeWidth="3" android:strokeLineJoin="round"
+        android:pathData="M33,30 H61 L73,42 V78 H33 Z" />
+    <path android:fillColor="#00000000" android:strokeColor="@color/ui_accent"
+        android:strokeWidth="4" android:strokeLineCap="round"
+        android:pathData="M49,48 H57 Q61,48 61,52 V62 Q61,66 57,66 H49 Q45,66 45,62 V52 Q45,48 49,48 M79,40 Q89,54 79,68" />
+</vector>

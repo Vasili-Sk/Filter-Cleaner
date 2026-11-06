@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original UI resources. SPDX-License-Identifier: MIT -->
+<resources>
+    <style name="Theme.FilterCleaner" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowBackground">@color/ui_background</item>
+        <item name="android:colorBackground">@color/ui_background</item>
+        <item name="android:colorAccent">@color/ui_accent</item>
+        <item name="android:colorControlHighlight">#336DE0CF</item>
+        <item name="android:textColorPrimary">@color/ui_text</item>
+        <item name="android:textColorSecondary">@color/ui_text_secondary</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:buttonStyle">@style/Widget.FilterCleaner.Button</item>
+    </style>
+
+    <style name="Widget.FilterCleaner.Button" parent="android:style/Widget.Material.Button">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:backgroundTint">@color/ui_secondary_tint</item>
+        <item name="android:textColor">@color/ui_secondary_text</item>
+    </style>
+
+    <style name="Widget.FilterCleaner.Button.Primary" parent="Widget.FilterCleaner.Button">
+        <item name="android:backgroundTint">@color/ui_primary_tint</item>
+        <item name="android:textColor">@color/ui_primary_text</item>
+    </style>
+
+    <style name="TextAppearance.FilterCleaner.Section" parent="android:style/TextAppearance.Material.Title">
+        <item name="android:textColor">@color/ui_text</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.FilterCleaner.Body" parent="android:style/TextAppearance.Material.Body1">
+        <item name="android:textColor">@color/ui_text_secondary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.FilterCleaner.Label" parent="android:style/TextAppearance.Material.Caption">
+        <item name="android:textColor">@color/ui_text_secondary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.FilterCleaner.Value" parent="android:style/TextAppearance.Material.Body2">
+        <item name="android:textColor">@color/ui_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">monospace</item>
+    </style>
+</resources>

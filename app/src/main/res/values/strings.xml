@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original UI resources. SPDX-License-Identifier: MIT -->
+<resources>
+    <string name="app_name">Filter Cleaner</string>
+    <string name="ui_details_heading">Filter details</string>
+    <string name="ui_uid_label">Serial number</string>
+    <string name="ui_product_label">Product code</string>
+    <string name="ui_counter_label">Raw usage counter</string>
+    <string name="ui_placeholder">—</string>
+    <string name="ui_cleanup">Cleanup filter</string>
+    <string name="ui_status_initial_title">Waiting for filter tag</string>
+    <string name="ui_status_initial_message">Hold the tag near the NFC antenna on your phone. Keep it in place to read and reset the counter.</string>
+</resources>

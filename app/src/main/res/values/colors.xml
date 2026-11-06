@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original UI resources. SPDX-License-Identifier: MIT -->
+<resources>
+    <color name="ui_background">#0B1525</color>
+    <color name="ui_surface">#14263B</color>
+    <color name="ui_surface_border">#30475F</color>
+    <color name="ui_text">#F0F5FC</color>
+    <color name="ui_text_secondary">#BACADD</color>
+    <color name="ui_accent">#6DE0CF</color>
+    <color name="ui_on_accent">#082B2A</color>
+    <color name="ui_button_secondary">#2B445F</color>
+    <color name="ui_disabled_background">#26364A</color>
+    <color name="ui_disabled_text">#9CAEC2</color>
+</resources>

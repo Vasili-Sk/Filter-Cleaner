@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original foreground NFC flow messages. SPDX-License-Identifier: MIT -->
+<resources>
+    <string name="flow_cleanup_button">Cleanup filter</string>
+    <string name="flow_retry_button">Retry read</string>
+    <string name="flow_read_failure_detail">%1$s\n%2$s</string>
+    <string name="flow_unknown">—</string>
+    <string name="flow_wait_title">Waiting for filter</string>
+    <string name="flow_wait_message">Hold the Xiaomi filter tag against your phone. Its serial and counter will appear automatically.</string>
+    <string name="flow_no_nfc_title">NFC is not available</string>
+    <string name="flow_no_nfc_message">This phone cannot read NFC tags. Use an Android phone with NFC.</string>
+    <string name="flow_nfc_off_title">NFC is off</string>
+    <string name="flow_nfc_off_message">Open NFC settings and switch NFC on. Then hold the filter tag against your phone.</string>
+    <string name="flow_start_failed_title">Cannot start NFC</string>
+    <string name="flow_start_failed_message">Close other NFC apps and check NFC settings. Return to Filter Cleaner to scan again.</string>
+    <string name="flow_reading_title">Reading the tag</string>
+    <string name="flow_reading_message">Keep the tag in position. This read does not write to the tag.</string>
+    <string name="flow_detected_title">Filter tag detected</string>
+    <string name="flow_detected_message">Keep the tag in position. Cleanup filter resets only the counter.</string>
+    <string name="flow_zero_title">The counter is zero</string>
+    <string name="flow_zero_message">No usage is recorded. No reset is needed. This does not indicate the filter condition.</string>
+    <string name="flow_already_zero_message">The counter was already zero. No data was written. The counter does not measure filter condition.</string>
+    <string name="flow_writing_title">Reset in progress</string>
+    <string name="flow_writing_message">Keep the tag in position. Do not close the app.</string>
+    <string name="flow_reset_done_title">Reset verified</string>
+    <string name="flow_reset_done_message">The counter is verified as zero. Install the filter and check the purifier display.</string>
+    <string name="flow_tag_lost_title">Tag contact lost</string>
+    <string name="flow_tag_lost_message">The displayed tag data was cleared. Remove the tag, then touch it to your phone again. Keep it in position until the read is complete.</string>
+    <string name="flow_read_failed_title">Cannot read this tag</string>
+    <string name="flow_read_failed_message">No reset command was sent. Keep the tag in position and tap Retry read. Authentication is not retried automatically.</string>
+    <string name="flow_reset_failed_title">Reset stopped before writing</string>
+    <string name="flow_reset_failed_message">No reset command was sent. Remove the tag, then touch it to your phone again to read the counter before another reset.</string>
+    <string name="flow_uncertain_title">Reset result is not verified</string>
+    <string name="flow_uncertain_message">The counter on tag %1$s may have changed. Remove that tag, then touch it to your phone again for an automatic read. All resets stay disabled until that same tag is read successfully. A different tag cannot clear this requirement.</string>
+</resources>

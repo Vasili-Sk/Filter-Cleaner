@@ -1,0 +1,17 @@
+.gradle/
+**/build/
+dist/
+local.properties
+.idea/
+*.iml
+.kotlin/
+*.jks
+*.keystore
+*.pem
+*.p12
+*.pfx
+.env
+.env.*
+.gh-*
+.git-gh-*
+captures/
